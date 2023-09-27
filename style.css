@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(image/main3.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 0 8%;
+    position: relative;
+}
+
+.logo{
+    width: 160px;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.content{
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    color:#fff;
+}
+
+.content h1{
+    font-size: 64px;
+    font-weight: 600;
+}
+
+.content h1 span{
+    color:#f80074;
+    text-shadow: 2px 2px 10px #2900136e;
+}
+
+.content button{
+    background: transparent;
+    border:2px solid #fff;
+    outline:none;
+    padding:12px 25px;
+    color:#fff;
+    font-size: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    cursor:pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.content button:hover{
+    color:#ff3995;
+    border:2px solid #ff3895;
+    box-shadow: 2px 2px 2px #ff389585;
+    font-size: large;
+}
+
+.content button img{
+    width: 40px;
+    margin-left: 10px;
+}
+
+.launch-time{
+    display:flex;
+}
+
+.launch-time div{
+    flex-basis:100px;
+}
+
+.launch-time div p{
+    font-size: 60px;
+    margin-bottom: -14px;
+}
+
+.rocket{
+    width: 250px;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    animation: rocket 4s linear infinite;
+}
+
+@keyframes rocket{
+    0%{
+        bottom: 0;
+        opacity: 0;
+    }
+   100%{
+        bottom: 105%;
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile phone styles */
+
+    .container {
+        padding: 20px; /* Adjust padding for smaller screens */
+        max-width: 100%; /* Full width for smaller screens */
+    }
+
+    .logo {
+        width: 80px; /* Adjust logo size for smaller screens */
+    }
+
+    .content h1 {
+        font-size: 40px; /* Adjust font size for smaller screens */
+    }
+
+    .content button {
+        padding: 10px 15px; /* Adjust button padding for smaller screens */
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+
+    .launch-time div{
+        flex-basis:90px;
+    }
+
+    .launch-time div p {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
+}
+
